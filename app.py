@@ -4,11 +4,11 @@ import pandas as pd
 import streamlit as st
 import joblib
 
-with open('final_model.joblit', 'rb') as file:
+with open('final_model.joblib', 'rb') as file:
     model = joblib.load(file)
 
-with open('transformer.joblit', 'rb') as file:
-    transformer = pickle.load(file)
+with open('transformer.joblib', 'rb') as file:
+    transformer = joblib.load(file)
 
 def prediction(input_list):
     input_list = np.array(input_list, dtype=object)
